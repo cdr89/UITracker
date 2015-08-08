@@ -1,2 +1,2 @@
 # UITracker
-WebService for user interactions tracking
+Web Service for user interactions tracking
