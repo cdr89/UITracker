@@ -10,44 +10,44 @@ class Event
 {
 
     /**
-     * Short description of attribute category
+     * Event category (mandatory)
      */
-    public $category = null;
+    public $category;
 
     /**
-     * Short description of attribute action
+     * User action (mandatory)
      */
-    public $action = null;
+    public $action;
 
     /**
-     * Short description of attribute label
+     * Label for @attribute value (optional)
      */
-    public $label = null;
+    public $label;
 
     /**
-     * Short description of attribute value
+     * Value for events that expect it (optional)
      */
-    public $value = null;
+    public $value;
 
     /**
-     * Short description of attribute userId
+     * User id (optional)
      */
-    public $userId = null;
+    public $userId;
 
     /**
-     * Short description of attribute userToken
+     * Token used to validate an userId (optional)
      */
-    public $userToken = null;
+    public $userToken;
 
     /**
-     * Short description of attribute ipAddress
+     * IP address that has generated the event (mandatory)
      */
-    public $ipAddress = null;
+    public $ipAddress;
 
     /**
-     * Short description of attribute dateTime
+     * Date and time of the event
      */
-    public $dateTime = null;
+    public $dateTime;
 
 } /* end of class Event */
 
