@@ -1,16 +1,16 @@
 # UITracker
 Web Service for user interactions tracking
 
-_Usage example:
+Usage example:
 http://localhost/uitracker/webservices/trackevent.php?category=HOMEPAGE&action=BANNER_CLICK
 
-_In your MySQL console:
+In your MySQL console:
 ```sql
     use uitracker;
     select * from UserEvent;
 ```
 
-_You will see into UserEvent table:
+You will see into UserEvent table:
 
 | id | category | action       | label | value | userId | userToken | ipAddress | dateTime            |
 |----|----------|--------------|-------|-------|--------|-----------|-----------|---------------------|
@@ -18,7 +18,7 @@ _You will see into UserEvent table:
 
 
 
-_Notes:
+Notes:
 This project uses PDO and MySQL extensions, so you need to add some lines in your php.ini
 
 on Linux:
