@@ -45,7 +45,7 @@ class Event
     public $ipAddress;
 
     /**
-     * Date and time of the event
+     * Date and time of the event (mandatory)
      */
     public $dateTime;
 

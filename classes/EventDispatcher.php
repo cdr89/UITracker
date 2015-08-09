@@ -13,7 +13,7 @@ class EventDispatcher
     /**
      * Short description of attribute eventStore
      */
-    public $eventStore = null;
+    private $eventStore = null;
 
     function __construct()
     {
@@ -30,7 +30,7 @@ class EventDispatcher
      */
     public function dispatchEvent(Event $event)
     {
-        //TODO
+        $this->eventStore->storeEvent($event);
     }
 
 } /* end of class EventDispatcher */
