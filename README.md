@@ -3,7 +3,35 @@ Web Service for user interactions tracking
 
 ### Usage example:
 
+###### URL example:
 [http://localhost/uitracker/webservices/trackevent.php?category=HOMEPAGE&action=BANNER_CLICK](http://localhost/uitracker/webservices/trackevent.php?category=HOMEPAGE&action=BANNER_CLICK)
+
+###### In web page (see into "examples" folder):
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ADD jquery library and uitracker.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/uitracker.js"></script>
+</head>
+<body>
+<a id="clickMe" href="#">Click me!</a>
+<script type="text/javascript">
+    // Construct the instace of the tracker passing the webservice URL
+    // you can override the default UITracker variable like in the example below:
+    // uitracker = new UITracker('http://www.otherURL.com/webservice.php', 'GET');
+
+    $('#clickMe').click(function () {
+        // Call on the uitracker object the method trackEvent()
+        UITracker.trackEvent('WEB_EVENT', 'A_CLICK');
+
+        // Do other stuffs...
+    });
+</script>
+</body>
+</html>
+```
 
 
 In your MySQL console:
