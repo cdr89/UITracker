@@ -4,7 +4,7 @@ Web Service for user interactions tracking
 ### Usage example:
 
 ###### URL example:
-[http://localhost/uitracker/webservices/trackevent.php?category=HOMEPAGE&action=BANNER_CLICK](http://localhost/uitracker/webservices/trackevent.php?category=HOMEPAGE&action=BANNER_CLICK)
+[http://localhost/uitracker/webservices/trackevent.php?category=WEB_EVENT&action=A_CLICK](http://localhost/uitracker/webservices/trackevent.php?category=HOMEPAGE&action=BANNER_CLICK)
 
 ###### In web page (see into "examples" folder):
 ```html
@@ -42,9 +42,9 @@ In your MySQL console:
 
 You will see into UserEvent table:
 
-| id | category | action       | label | value | userId | userToken | ipAddress | dateTime            |
-|----|----------|--------------|-------|-------|--------|-----------|-----------|---------------------|
-| 1  | HOMEPAGE | BANNER_CLICK |       |       |        |           | 127.0.0.1 | 2015-08-09 13:22:50 |
+| id | category  | action  | label | value | userId | userToken | ipAddress | dateTime            |
+|----|-----------|---------|-------|-------|--------|-----------|-----------|---------------------|
+| 1  | WEB_EVENT | A_CLICK |       |       |        |           | 127.0.0.1 | 2015-08-09 13:22:50 |
 
 
 
