@@ -49,6 +49,15 @@ class Event
      */
     public $dateTime;
 
+    public function validate(){
+        return (
+            isset($this->category) &&
+            isset($this->action) &&
+            isset($this->dateTime) &&
+            isset($this->ipAddress)
+        );
+    }
+
 } /* end of class Event */
 
 ?>
