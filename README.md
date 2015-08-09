@@ -27,17 +27,13 @@ This project uses PDO and MySQL extensions, so you need to add some lines in you
 on Linux:
 
 > extension=mysqli.so
-> 
 > extension=pdo.so
-> 
 > extension=pdo_mysql.so
 
 
 on Windows:
 
 > extension=php_mysqli.dll
-> 
 > extension=php_pdo.dll
-> 
 > extension=php_pdo_mysql.dll
 
