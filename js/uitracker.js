@@ -6,7 +6,7 @@ function UITracker(baseWebServiceURL, method) {
     if (!method)
         this.method = 'POST';
     else
-        this.method = 'GET';
+        this.method = method;
 
     this.trackEvent = function (category, action, label, value, userId, userToken) {
         var request = $.ajax({
