@@ -29,9 +29,29 @@ Web Service for user interactions tracking
         // Do other stuffs...
     });
 </script>
+
 </body>
 </html>
 ```
+
+###### Into an Android or Java application:
+```java
+        try {
+			// Default POST event tracking
+			UITracker uiTracker = new UITracker();
+			uiTracker.trackEvent("ANDROID_EVENT", "A_TAP");
+
+			// Custom GET event tracking
+			uiTracker = new UITracker(
+					"http://localhost/uitracker/webservices/trackevent.php",
+					UITracker.RequestMethod.GET);
+			uiTracker.trackEvent("ANDROID_EVENT", "A_TAP", "request_type",
+					"GET", null, null);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+```
+
 
 
 In your MySQL console:
@@ -42,10 +62,11 @@ In your MySQL console:
 
 You will see into UserEvent table:
 
-| id | category  | action  | label | value | userId | userToken | ipAddress | dateTime            |
-|----|-----------|---------|-------|-------|--------|-----------|-----------|---------------------|
-| 1  | WEB_EVENT | A_CLICK |       |       |        |           | 127.0.0.1 | 2015-08-09 13:22:50 |
-
+| id | category      | action  | label        | value | userId | userToken | ipAddress | dateTime            |
+|----|---------------|---------|--------------|-------|--------|-----------|-----------|---------------------|
+| 1  | WEB_EVENT     | A_CLICK |              |       |        |           | 127.0.0.1 | 2015-08-09 13:22:50 |
+| 2  | ANDROID_EVENT | A_TAP   |              |       |        |           | 127.0.0.1 | 2015-08-10 21:43:21 |
+| 3  | ANDROID_EVENT | A_TAP   | request_type | GET   |        |           | 127.0.0.1 | 2015-08-10 21:43:21 |
 
 
 ### Notes:
